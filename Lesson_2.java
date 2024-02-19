@@ -1,0 +1,153 @@
+public class Lesson_2 {
+    public static void main(String[] args) {
+        checkSumSign(2,3);
+        System.out.println(checkSumSign(2,3));
+        System.out.println();
+        checkSignNumber1(7);
+        System.out.println();
+        checkSignNumber2(-7);
+        System.out.println(checkSignNumber2(-7));
+        System.out.println();
+        printText(5, "Строка текста");
+        System.out.println();
+        arrayOne ();
+        System.out.println();
+        System.out.println();
+        arrayTwo ();
+        System.out.println();
+        System.out.println();
+        arrayThree ();
+        System.out.println();
+        System.out.println();
+        arrayFour ();
+        System.out.println();
+        System.out.println();
+        arrayFive (5, 10);
+    }
+    public static boolean checkSumSign(int a, int b) {
+       if ((a+b)>=10&&(a+b)<=20){
+        return true;}
+       else
+       {
+           return false;}
+
+    }
+    public static void checkSignNumber1(int a) {
+
+        if (a>=0)
+            System.out.println("Число положительное");
+        else System.out.println("Число отрицательное");
+
+    }
+    public static boolean checkSignNumber2(int a) {
+
+        if (a<=0)
+        {
+            return true;
+        }
+        else {
+            return false;
+            }
+
+    }
+    public static void printText(int a, String b) {
+
+        if (a>=0)
+        {for (int i=0; i<a; i++)
+            System.out.println(b); }
+
+       else System.out.println("Введенное вами число - меньше либо равно 0");
+
+    }
+
+        //public static boolean visocosnyYear (int a) {
+
+       // if (a>=0)
+       // {
+        //    if (((a%4)==0)&&((a%100)!=0)&&((a%400)==0))
+        //        return true;
+         //   else return false;
+       // }
+
+
+        //else System.out.println("Введенное вами число - меньше либо равно 0");
+
+  //  }
+    // я не понимаю, почему не работает здесь return?!
+    // обьясните, пожалуйста, если можно
+
+    public static void arrayOne ()
+    {
+      int[] arr={1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+      for (int i=0; i<arr.length; i++)
+      {
+          if (arr[i]==1)
+          {arr[i]=0;}
+          else {arr[i]=1;}
+      }
+        for (int i=0; i<arr.length; i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+    public static void arrayTwo ()
+    {
+        int[] arr= new int[100];
+        for (int i=0; i<arr.length; i++)
+        {
+            arr[i]=(i+1);
+        }
+        for (int i=0; i<arr.length; i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+    public static void arrayThree ()
+    {
+        int[] arr={1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i=0; i<arr.length; i++)
+        {
+          if (arr[i]<6)  arr[i]=arr[i]*2;
+          else continue;
+        }
+        for (int i=0; i<arr.length; i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+
+    }
+    public static void arrayFour ()
+    {
+        int[][] arr= new int[10][10];
+        for (int i=0; i<10; i++)
+        {
+            for (int j=0; j<10; j++)
+                if (i==j)
+                {
+                    arr [i][j]=1;
+                };
+        }
+        for (int i=0; i<10; i++) {
+            {
+                for (int j = 0; j < 10; j++)
+                    System.out.print(arr[i][j] + " ");
+
+            }
+            System.out.println();
+        }
+    }
+    public static void arrayFive (int len, int initialValue)
+    {
+        int[] arr= new int[len];
+        for (int i=0; i<arr.length; i++)
+        {
+            arr[i]=(initialValue);
+        }
+        for (int i=0; i<arr.length; i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+
+
+}
