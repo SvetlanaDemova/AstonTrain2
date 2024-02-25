@@ -60,14 +60,14 @@ public class Lesson_2 {
 
     }
 
-        //public static boolean visocosnyYear (int a) {
+        public static boolean visocosnyYear (int a) {
 
-       // if (a>=0)
-       // {
-        //    if (((a%4)==0)&&((a%100)!=0)&&((a%400)==0))
-        //        return true;
-         //   else return false;
-       // }
+        if (a>=0)
+       {
+           if (((a%4)==0)&&((a%100)!=0)&&((a%400)==0))
+                return true;
+           else return false;
+        }
 
 
         //else System.out.println("Введенное вами число - меньше либо равно 0");
