@@ -62,21 +62,13 @@ public class Lesson_2 {
 
         public static boolean visocosnyYear (int a) {
 
-        if (a>=0)
-       {
-           if (((a%4)==0)&&((a%100)!=0)&&((a%400)==0))
-                return true;
+        if ((a>=0)&&(((a%4)==0)&&((a%100)!=0)&&((a%400)==0)))
+            return true;
            else return false;
         }
 
 
-        //else System.out.println("Введенное вами число - меньше либо равно 0");
-
-  //  }
-    // я не понимаю, почему не работает здесь return?!
-    // обьясните, пожалуйста, если можно
-
-    public static void arrayOne ()
+        public static void arrayOne ()
     {
       int[] arr={1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
       for (int i=0; i<arr.length; i++)
@@ -108,7 +100,6 @@ public class Lesson_2 {
         for (int i=0; i<arr.length; i++)
         {
           if (arr[i]<6)  arr[i]=arr[i]*2;
-          else continue;
         }
         for (int i=0; i<arr.length; i++)
         {
@@ -119,14 +110,15 @@ public class Lesson_2 {
     public static void arrayFour ()
     {
         int[][] arr= new int[10][10];
-        for (int i=0; i<10; i++)
+        for (int i=0, j=0; ((i<10)&&(j<10)); i++, j++)
         {
-            for (int j=0; j<10; j++)
-                if (i==j)
-                {
-                    arr [i][j]=1;
-                };
+            arr [i][j]=1;
         }
+        for (int i=0, j=9; ((i<10)&&(j>=0)); i++, j--)
+        {
+            arr [i][j]=1;
+        }
+
         for (int i=0; i<10; i++) {
             {
                 for (int j = 0; j < 10; j++)
